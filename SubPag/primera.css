@@ -1,0 +1,235 @@
+*{
+    margin: 0;                                                         /*margen*/
+    padding: 0;                                                        /*Relleno*/
+    box-sizing: border-box;                                            /*Dimencion de la caja*/
+}
+
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;              /*Tipo de letra*/
+}
+
+.contenedor{
+    padding: 60px 0;                                                    /*Relleno*/
+    width: 90%;                                                         /*Ancho*/
+    max-width: 1000px;                                                  /*Ancho maximo*/
+    margin: auto;                                                       /*margen*/
+    overflow: hidden;                                                   /*Limita el contenido a mostrar*/
+}
+
+.titulo{
+    color: rgb(19, 122, 5);                                         /*Color de texto*/
+    font-size: 30px;                                                    /*Tamaño de letra*/
+    text-align: center;                                                 /*Alineacion de texto*/
+    margin-bottom: 60px;                                                /*Margen del texto*/
+}
+
+header{
+    width: 100%;                                                        /*Ancho*/
+    height: 550px;                                                      /*Largo*/
+     background: #a8ff78; 
+     /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, hsla(99, 100%, 74%, 0.63), hsla(162, 100%, 74%, 0.61)), url(../SubPag/img/portada.jpg); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, hsla(99, 100%, 74%, 0.61), hsla(162, 100%, 74%, 0.61)), url(../SubPag/img/portada.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ background-size: cover;                                                /*Definir valores*/
+ background-attachment: fixed;                                          /*Definir valores*/
+ position: relative;                                                    /*Posición*/
+
+}
+
+nav{
+    text-align: right;                                                  /*Alineación del texto*/
+    padding: 30px 50px 0 0;                                             /*Relleno*/
+}
+nav > a {
+    color: #030303;                                                   /*Color de texto*/
+    font-weight: 300;                                                   /*Difuminar*/
+    text-decoration: none;                                              /*Decoracion del texto*/
+    margin-right: 10px;                                                 /*Margen izquierdo*/
+}
+
+nav > a:hover {
+    text-decoration: underline;                                         /*Decoracion del texto*/
+}
+
+header .textos-header{
+    display: flex;                                                      /*Diseño del bloque*/
+    height: 430px;                                                      /*Largo*/
+    width: 100%;                                                        /*Ancho*/
+    align-items: center;                                                /*Alineacion de los objetos*/
+    justify-content: center;                                            /*Justificación de contenido*/
+    flex-direction: column;                                             /*Dirección flexible*/
+    text-align:center ;                                                 /*Alineacion del texto*/
+}
+
+.textos-header h1{
+    font-size: 40px;                                                    /*Tamaño de texto*/
+    color: rgb(4, 4, 5);                                        /*Color de texto*/
+}
+
+.wave{
+    position: absolute;                                                 /*Posicion*/                            
+    bottom: 0;                                                          /*Fondo*/
+    width: 100%;                                                        /*Ancho*/
+}
+.contenedor-sobre-nosotros{
+    display: flex;                                                      /*Diseño de bloque*/
+    justify-content: space-evenly;                                      /*Justificacion de contenido*/
+}
+
+.sobre-nosotros .contenedor-textos{
+    width: 60%;                                                         /*Ancho*/
+}
+.contenido-textos h3{
+    margin-bottom: 15px;                                                /*Margen del texto*/
+    
+    
+}
+
+.contenido-textos h3 span{
+    background:rgb(53, 189, 137) ;                                   /*Color de relleno*/
+    color: white;                                                     /*Color de texto*/
+    border-radius:50% ;                                                 /*Radio del borde*/
+    display: inline-block;                                              /*Diseño del bloque*/
+    text-align: center;                                                 /*Alineacion del texto*/
+    width: 30px;                                                        /*Ancho*/
+    height: 30px;                                                       /*Largo*/
+    padding: 2px;                                                       /*Espacio de relleno*/
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);                          /*Sombreado de caja*/
+    margin-right: 5px;                                                  /*Margen izquierdo*/
+}
+/*Segunda parte*/
+
+.contenedor-textos p{
+    padding:  0px 0px 30px 15px;                                        /*Espacio de relleno*/
+    font-weight: 300px;                                                 /*Tamaño de texto*/
+   
+    
+}
+  
+  .container {                                                                          
+    width: 90%;                                                         /*Ancho*/                                                              
+    max-width: 1000px;                                                  /*Ancho maximo*/                
+    margin: 20px auto;                                                  /*Margen*/                
+    display: grid;                                                      /*Diseño del bloque*/                
+    gap: 20px;                                                          /*Espacio entre filas*/               
+    grid-template-columns: repeat (3, 1fr);                             /*Columnas de las cuadriculas*/                
+    grid-template-rows: repeat (4, auto);                               /*Filas de las cuadriculas*/                
+    grid-template-areas:                                                /*Union de celdas*/                
+      "header header header"                                                            
+      "contenido contenido aside"                                                       
+      "conten-uno conten-dos aside"                                                     
+      "footer footer footer";                                                           
+  }
+  .container .header,                                                                   
+  .container .contenido,                                                                
+  .container .aside,                                                                    
+  .container .footer,                                                                   
+  .container > div {                                                                   
+    
+    padding: 20px;                                                                      /*Espacio de Relleno*/
+    border-radius: 4px;                                                                 /*Radio del borde*/
+  }
+  .container .header {                                                                  /*Encabezado*/
+    background-color: #fcf378;                                                        /*Color de contenido*/
+    grid-area: header;                                                                  /*Unión de celdas*/
+    color: #ffff;                                                                     /*Color de texto*/
+  }
+  .contenido {                                                                          /*Contenedor*/
+    grid-area: contenido;                                                               /*Unión de celdas*/
+  }
+  .container .aside {                                                                   /*Contenedor independiente*/
+    grid-area: aside;                                                                   /*Unión de celdas*/
+    text-align: center;                                                                 /*Alineación del texto*/
+    justify-content: center;                                                            /*Justificacion de conteido*/
+    min-height: 100px;                                                                  /*Minimo del largo*/
+  }
+  .container .conten-uno,                                                               /*Contenedor uno*/
+  .container .conten-dos {                                                              /*Contenedor dos*/
+    background: hsla(170, 100%, 49%, 0.712);                                                              /*Color de Relleno*/
+    color: rgb(12, 7, 7);                                                             /*Color de texto*/
+    height: 100px;                                                                      /*Largo*/
+    text-align: center;                                                                 /*Alineación de texto*/
+    display: flex;                                                                      /*Diseño del bloque*/
+    align-items: center;                                                                /*Alineación de los contenedores hijos*/
+    justify-content: center;                                                            /*Justificar el contenido*/
+  }
+  
+  .container .conten-uno {                                                              
+    grid-area: conten-uno;                                                              /*Area de la cuadricula*/
+  }
+  .container .conten-dos {                                                             
+    grid-area: conten-dos;                                                              /*Area de la cuadricula*/
+  }
+  .container .footer {                                                                  
+    background: hsla(118, 67%, 49%, 0.726);                                          /*Color de relleno*/                                                       
+    color: #ffff;                                                                     /*Color de texto*/
+    grid-area: footer;                                                                  /*Area de la cuadricula*/
+  }
+ 
+  /*Tercera parte*/                                                                 
+  .containerr .contenido1,                                                                
+  .containerr .aside2 {                                                                   
+    
+    padding: 20px;                                                                      /*Espacio de Relleno*/
+    border-radius: 4px;                                                                 /*Radio del borde*/
+  }
+.contenido1{                                                                           /*Contenedor*/
+  grid-area: contenido;                                                                 /*Unión de celdas*/
+}
+.containerr .aside2 {                                                                   /*Contenedor independiente*/
+  grid-area: aside;                                                                   
+  text-align: center;                                                                   /*Alineación del texto*/
+  justify-content: center;                                                              /*Justificacion de conteido*/
+  min-height: 80px;                                                                     /*Minimo del largo*/
+}
+.containerr {                                                                          
+  width: 100%;                                                                          /*Acho*/
+  max-width: 900px;                                                                     /*Maximo de ancho*/
+  margin: 20px auto;                                                                    /*Margen*/
+  display: grid;                                                                        /*Diseño de bloque*/
+  gap: 20px;                                                                            /*Espacio entre filas*/
+  grid-template-columns: repeat (3, 1fr);                                               /*Columna de la cuadricula*/
+  grid-template-rows: repeat (4, auto);                                                 /*Fila de la cuadricula*/
+  grid-template-areas:                                                                  /*Union de celdas*/
+    "header header header"                                                            
+    "contenido contenido aside"                                                       
+    "conten-uno conten-dos aside"                                                     
+    "footer footer footer";  
+}
+
+footer{
+  background: hsla(135, 58%, 43%, 0.61);                                                                   /*Color de relleno*/
+  padding: 60px 0 30px 0;                                                               /*Espacio de relleno*/
+  margin: auto;                                                                         /*Margen*/
+  overflow: hidden;                                                                     /*Limite del contenido a mostrar*/
+
+}
+.contenedor-footer{
+  display: flex;                                                                        /*Diseño de bloque*/
+  width: 90%;                                                                           /*Ancho*/  
+  justify-content: space-evenly;                                                        /*Justificacion del contenido*/
+  margin: auto;                                                                         /*Margen*/
+  padding-bottom: 50px;                                                                 /*Espacio de relleno*/
+  border-bottom: 1px solid rgb(64, 211, 34);                                                    /*Borde de relleno*/
+}
+
+.content-foo{
+  text-align: center;                                                                   /*Alineacion del texto*/
+}
+
+.content-foo h4{
+  color: white;                                                                       /*Color de texto*/
+  border-bottom: 3px solid rgb(64, 211, 34);                                                    /*Borde de relleno*/
+  padding-bottom: 5px;                                                                  /*Espacio de relleno*/
+  margin-bottom: 10px;                                                                  /*Margen del relleno*/
+}
+.content-foo p{
+  color: whitesmoke;                                                                  /*Color de texto*/
+
+}
+.titulo-final{
+  text-align: center;                                                                   /*Alineacion de texto*/
+  font-size: 24px;                                                                      /*Tamaño de texto*/
+  margin: 20px 0 0 0;                                                                   /*Margen*/
+  color: rgb(247, 247, 241);                                                          /*Color de texto*/
+}
